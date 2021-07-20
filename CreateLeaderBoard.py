@@ -41,10 +41,17 @@ def print_leaderboard(title, user_data_list):
         array_index = 3
     print(title)
     counter = 1
+    rows = []
     for user_data in user_data_list:
-        leaderboard_entry = '         {}) {}'.format(counter, find_real_name(user_data[0]))
-        print(leaderboard_entry)
+        leaderboard_entry = ['    ' + str(counter) + ')', find_real_name(user_data[0]), str(user_data[array_index])]
+        rows.append(leaderboard_entry)
         counter += 1
+    lens = []
+    for col in zip(*rows):
+        lens.append(max([len(v) for v in col]))
+    format = "  ".join(["{:<" + str(l) + "}" for l in lens])
+    for row in rows:
+        print(format.format(*row))
 
 def find_real_name(nickname):
     if (nickname == 'eurniee'):
