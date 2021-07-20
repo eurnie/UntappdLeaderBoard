@@ -42,9 +42,17 @@ def print_leaderboard(title, user_data_list):
     print(title)
     counter = 1
     for user_data in user_data_list:
-        leaderboard_entry = '         {}) {}'.format(counter, user_data[0])
+        leaderboard_entry = '         {}) {}'.format(counter, find_real_name(user_data[0]))
         print(leaderboard_entry)
         counter += 1
+
+def find_real_name(nickname):
+    if (nickname == 'eurniee'):
+        return 'Arne Vermeulen'
+    elif (nickname == 'BassieWouters'):
+        return 'Sebastiaan Wouters'
+    elif (nickname == 'Den_Henry'):
+        return 'Hendrik Van Beersel'
 
 ###########################
 # Start
