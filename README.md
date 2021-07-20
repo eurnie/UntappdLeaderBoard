@@ -1,0 +1,3 @@
+The goal is to create a website with a leaderboard between my friends based on untappd.com data. This way, it's easy to see who drunk the most unique beers etc...
+
+Thanks to https://github.com/WebBreacher/untappdScraper for the inspiration and the scripts to scrape untappd.com content.
