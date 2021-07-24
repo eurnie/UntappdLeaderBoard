@@ -9,6 +9,10 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 # Functions
 ###########################
 
+
+
+
+
 def get_data_from_untappd(url):
     # Setting up and Making the Web Call
     try:
