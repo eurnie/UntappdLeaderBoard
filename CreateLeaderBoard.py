@@ -100,7 +100,6 @@ def find_real_name(nickname):
 ###########################
 def main() : 
     
-    
     # Suppress HTTPS warnings
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
