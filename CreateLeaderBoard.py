@@ -1,6 +1,6 @@
-#!/Python27/python
-print "Content-Type: text/html\n\n";
-print """<html>
+#!/usr/bin/python3
+print("Content-Type: text/html\n\n")
+print("""<html>
 <head>
 <title>Untappd Leaderboard</title>
 <style>
@@ -12,7 +12,7 @@ print """<html>
 </style>
 </head>
 <body>
-"""
+""")
 
 import re
 import requests
@@ -55,37 +55,28 @@ def print_leaderboard(title, user_data_list):
         array_index = 1
     elif (title == 'Total Badges'):
         array_index = 3
-    print "<h4>"
+    print("<h4>")
     print(title)
-    print """</h4>
+    print("""</h4>
         <table>
         <tr>
             <th>Ranking</th>
             <th>Naam</th>
             <th>Aantal</th>
         </tr>
-        """
+        """)
     counter = 1
     rows = []
     for user_data in user_data_list:
-        print "<tr><td>"
-        print str(counter) + ') </td>'
-        print "<td>" + find_real_name(user_data[0]) + "</td>"
-        print "<td>" + str(user_data[array_index]) + "</td>"
-        print "</tr>"
+        print("<tr><td>")
+        print(str(counter) + ') </td>')
+        print("<td>" + find_real_name(user_data[0]) + "</td>")
+        print("<td>" + str(user_data[array_index]) + "</td>")
+        print("</tr>")
         
-        #leaderboard_entry = ['    ' + str(counter) + ')', find_real_name(user_data[0]), str(user_data[array_index])]
-        #rows.append(leaderboard_entry)
         counter += 1
         
-    print "</table>"
-    
-    #lens = []
-    #for col in zip(*rows):
-        #lens.append(max([len(v) for v in col]))
-    #format = "  ".join(["{:<" + str(l) + "}" for l in lens])
-    #for row in rows:
-        #print(format.format(*row))
+    print("</table>")
 
 def find_real_name(nickname):
     if (nickname == 'eurniee'):
@@ -98,9 +89,7 @@ def find_real_name(nickname):
 ###########################
 # Start
 ###########################
-def main() : 
-    
-    
+def main(): 
     # Suppress HTTPS warnings
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -127,8 +116,8 @@ def main() :
 
 
 main()
-print """
+print("""
 </body>
 </html>
- """
+""")
 
