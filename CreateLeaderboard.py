@@ -94,8 +94,7 @@ def main():
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
     # Get user info
-    # user_list = ['eurniee', 'BassieWouters', 'Den_Henry']
-    user_list = ['eurniee', 'BassieWouters']
+    user_list = ['eurniee', 'BassieWouters', 'Den_Henry']
     user_data_list = []
 
     for user in user_list:   
