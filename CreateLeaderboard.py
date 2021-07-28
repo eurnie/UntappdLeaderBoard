@@ -66,7 +66,7 @@ def print_leaderboard(title, user_data_list):
         <div class="container">""".format(id_name))
 
     print("            <h4>" + title + "</h4>")
-    print("""            <table>
+    print("""            <table class='center'>
                 <tr>
                     <th>Ranking</th>
                     <th>Name</th>
