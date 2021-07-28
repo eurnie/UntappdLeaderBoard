@@ -6,6 +6,9 @@ total_unique_beers_button.onclick = async() => { showTab(total_unique_beers_butt
 total_beers_button.onclick = async() => { showTab(total_beers_button, 'total_beers_tab') };
 total_badges_button.onclick = async() => { showTab(total_badges_button, 'total_badges_tab') };
 
+const home_tab = document.getElementById('total_unique_beers_tab');
+home_tab.style.display = 'block';
+
 function showTab(button, tab) {
     let i;
     let tablinks;
