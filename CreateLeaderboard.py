@@ -69,30 +69,27 @@ def print_leaderboard(title, user_data_list):
         <br>
         <div class="container">""".format(id_name))
 
-    print("        <h4>")
-    print(title)
-    print("""</h4>
-        <table>
-        <tr>
-            <th>Ranking</th>
-            <th>Name</th>
-            <th>Number</th>
-        </tr>
-        """)
+    print("            <h4>" + title + "</h4>")
+    print("""            <table>
+                <tr>
+                    <th>Ranking</th>
+                    <th>Name</th>
+                    <th>Number</th>
+                </tr>""")
     counter = 1
     rows = []
     for user_data in user_data_list:
-        print("<tr><td>")
-        print(str(counter) + '</td>')
-        print("<td>" + find_real_name(user_data[0]) + "</td>")
-        print("<td>" + str(user_data[array_index]) + "</td>")
-        print("</tr>")
+        print("                <tr>")
+        print("                    <td>" + str(counter) + '</td>')
+        print("                    <td>" + find_real_name(user_data[0]) + "</td>")
+        print("                    <td>" + str(user_data[array_index]) + "</td>")
+        print("                </tr>")
         
         counter += 1
         
-    print("</table>")
+    print("            </table>")
 
-    print("""</div>
+    print("""        </div>
     </div>
     """)
 
@@ -133,8 +130,7 @@ def main():
 
 
 main()
-print("""
-    <div class="voet">
+print("""    <div class="voet">
         <a href="https://github.com/eurnie/UntappdLeaderboard" target="_blank">https://github.com/eurnie/UntappdLeaderboard</a>
     </div>
 
