@@ -1,17 +1,21 @@
 #!/usr/bin/python3
 print("Content-Type: text/html\n\n")
-print("""<html>
+print("""
+<html>
+
 <head>
-<title>Untappd Leaderboard</title>
-<style>
-  table, th, td {
-  border: 1px solid black;
-  text-align: center;
-  border-collapse: collapse;
-}
-</style>
+    <meta charset="utf-8" />
+    <title>Untappd Leaderboard</title>
+    <link rel="stylesheet" href="http://arne.ulyssis.be/UntappdLeaderboard/style.css">
 </head>
-<body>
+
+<body class="background">
+    <!-- Menu tab-->
+    <div class="tab">
+        <button id="total_unique_beers_button" class="tablinks">Total Unique Beers</button>
+        <button id="total_beers_button" class="tablinks">Total Beers</button>
+        <button id="total_badges_button" class="tablinks">Total Badges</button>
+    </div>
 """)
 
 import re
@@ -49,27 +53,37 @@ def get_user_data(passed_user):
         return user1
 
 def print_leaderboard(title, user_data_list):
-    if (title == 'Total Unique'):
+    if (title == 'Total Unique Beers'):
         array_index = 2
+        id_name = '"total_unique_beers_tab"'
     elif (title == 'Total Beers'):
         array_index = 1
+        id_name = '"total_beers_tab"'
     elif (title == 'Total Badges'):
         array_index = 3
-    print("<h4>")
+        id_name = '"total_badges_tab"'
+
+    print("""   <!-- Tab content -->
+    <div id={} class="tabcontent">
+        <br>
+        <br>
+        <div class="container">""".format(id_name))
+
+    print("        <h4>")
     print(title)
     print("""</h4>
         <table>
         <tr>
             <th>Ranking</th>
-            <th>Naam</th>
-            <th>Aantal</th>
+            <th>Name</th>
+            <th>Number</th>
         </tr>
         """)
     counter = 1
     rows = []
     for user_data in user_data_list:
         print("<tr><td>")
-        print(str(counter) + ') </td>')
+        print(str(counter) + '</td>')
         print("<td>" + find_real_name(user_data[0]) + "</td>")
         print("<td>" + str(user_data[array_index]) + "</td>")
         print("</tr>")
@@ -77,6 +91,10 @@ def print_leaderboard(title, user_data_list):
         counter += 1
         
     print("</table>")
+
+    print("""</div>
+    </div>
+    """)
 
 def find_real_name(nickname):
     if (nickname == 'eurniee'):
@@ -101,9 +119,9 @@ def main():
         user_data = get_user_data(user)
         user_data_list.append([user, int(format(user_data[0].text)), int(format(user_data[1].text)), int(format(user_data[2].text))])
     
-    # Create leaderboard 'Total Unique'
+    # Create leaderboard 'Total Unique Beers'
     leaderboard_total_unique = sorted(user_data_list, key = lambda x: x[2], reverse = True)
-    print_leaderboard('Total Unique', leaderboard_total_unique)
+    print_leaderboard('Total Unique Beers', leaderboard_total_unique)
    
     # Create leaderboard 'Total Beers'
     leaderboard_total_beers = sorted(user_data_list, key = lambda x: x[1], reverse = True)
@@ -116,7 +134,12 @@ def main():
 
 main()
 print("""
+    <div class="voet">
+        <a href="https://github.com/eurnie/UntappdLeaderboard" target="_blank">https://github.com/eurnie/UntappdLeaderboard</a>
+    </div>
+
+    <script src="http://arne.ulyssis.be/UntappdLeaderboard/browser_main.js"></script>
 </body>
+
 </html>
 """)
-
