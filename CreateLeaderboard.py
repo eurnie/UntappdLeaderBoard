@@ -66,7 +66,7 @@ def print_leaderboard(title, user_data_list):
         <div class="container">""".format(id_name))
 
     print("            <h4>" + title + "</h4>")
-    print("""            <table>
+    print("""            <table class='center'>
                 <tr>
                     <th>Ranking</th>
                     <th>Name</th>
@@ -96,13 +96,15 @@ def find_real_name(nickname):
         return 'Sebastiaan Wouters'
     elif (nickname == 'Den_Henry'):
         return 'Hendrik Van Beersel'
+    elif (nickname == 'LarsVer'):
+        return 'Lars Vermeulen'
 
 def main(): 
     # Suppress HTTPS warnings
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
     # Get user info
-    user_list = ['eurniee', 'BassieWouters', 'Den_Henry']
+    user_list = ['eurniee', 'BassieWouters', 'Den_Henry','LarsVer']
     user_data_list = []
 
     for user in user_list:   
