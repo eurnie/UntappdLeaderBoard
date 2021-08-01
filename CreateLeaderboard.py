@@ -25,6 +25,10 @@ import time
 from bs4 import BeautifulSoup
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
+###########################
+# Functions
+###########################
+
 def get_data_from_untappd(url):
     # Setting up and Making the Web Call
     try:
@@ -99,6 +103,9 @@ def find_real_name(nickname):
     elif (nickname == 'Lars'):
         return 'Lars Vermeulen'
 
+###########################
+# Start
+###########################
 def main(): 
     # Suppress HTTPS warnings
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -122,6 +129,7 @@ def main():
     # Create leaderboard 'Total Badges'
     leaderboard_total_badges = sorted(user_data_list, key = lambda x: x[3], reverse = True)
     print_leaderboard('Total Badges', leaderboard_total_badges)
+
 
 main()
 print("""    <div class="voet">
