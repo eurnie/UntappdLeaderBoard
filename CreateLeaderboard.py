@@ -100,8 +100,6 @@ def find_real_name(nickname):
         return 'Sebastiaan Wouters'
     elif (nickname == 'Den_Henry'):
         return 'Hendrik Van Beersel'
-    elif (nickname == 'Lars'):
-        return 'Lars Vermeulen'
 
 ###########################
 # Start
@@ -111,7 +109,7 @@ def main():
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
     # Get user info
-    user_list = ['eurniee', 'BassieWouters', 'Den_Henry','Lars']
+    user_list = ['eurniee', 'BassieWouters', 'Den_Henry']
     user_data_list = []
 
     for user in user_list:   
