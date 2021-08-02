@@ -15,6 +15,7 @@ print("""
         <button id="total_unique_beers_button" class="tablinks">Total Unique Beers</button>
         <button id="total_beers_button" class="tablinks">Total Beers</button>
         <button id="total_badges_button" class="tablinks">Total Badges</button>
+        <button id="total_jupilers_button" class="tablinks">Total Jupilers</button>
     </div>
 """)
 
@@ -24,10 +25,6 @@ import time
 
 from bs4 import BeautifulSoup
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-
-###########################
-# Functions
-###########################
 
 def get_data_from_untappd(url):
     # Setting up and Making the Web Call
@@ -51,6 +48,21 @@ def get_user_data(passed_user):
     user1 = html_doc.find_all('span', 'stat')
     if user1:
         return user1
+        
+def get_user_aantal_jupiler(passed_user):
+    # Parsing user information
+    url = 'https://untappd.com/user/{}/beers'.format(passed_user)
+    resp = get_data_from_untappd(url)
+    html_doc = BeautifulSoup(resp, 'html.parser')
+
+    bieren = html_doc.find_all('div','beer-item')
+    # Iterate over each bier div tag
+    for bier in bieren:
+        if (bier['data-bid'] == '4679'):  #jupiler id
+            aantal = bier.find_all('p','check-ins')
+        
+    if aantal:
+        return aantal[0].text[8]
 
 def print_leaderboard(title, user_data_list):
     if (title == 'Total Unique Beers'):
@@ -62,6 +74,9 @@ def print_leaderboard(title, user_data_list):
     elif (title == 'Total Badges'):
         array_index = 3
         id_name = '"total_badges_tab"'
+    elif (title == 'Total Jupilers'):
+        array_index = 4
+        id_name = '"total_jupilers_tab"'
 
     print("""   <!-- Tab content -->
     <div id={} class="tabcontent">
@@ -105,9 +120,6 @@ def find_real_name(nickname):
     elif (nickname == 'DriesWets'):
         return 'Dries Wets'
 
-###########################
-# Start
-###########################
 def main(): 
     # Suppress HTTPS warnings
     requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -118,7 +130,8 @@ def main():
 
     for user in user_list:   
         user_data = get_user_data(user)
-        user_data_list.append([user, int(format(user_data[0].text)), int(format(user_data[1].text)), int(format(user_data[2].text))])
+        user_aantal_jupiler = get_user_aantal_jupiler(user)
+        user_data_list.append([user, int(format(user_data[0].text)), int(format(user_data[1].text)), int(format(user_data[2].text)),int(user_aantal_jupiler)])
     
     # Create leaderboard 'Total Unique Beers'
     leaderboard_total_unique = sorted(user_data_list, key = lambda x: x[2], reverse = True)
@@ -132,6 +145,10 @@ def main():
     leaderboard_total_badges = sorted(user_data_list, key = lambda x: x[3], reverse = True)
     print_leaderboard('Total Badges', leaderboard_total_badges)
 
+    # Create leaderboard 'Total Jupilers'
+    leaderboard_total_jupilers = sorted(user_data_list, key = lambda x: x[4], reverse = True)
+    print_leaderboard('Total Jupilers', leaderboard_total_jupilers)
+    
 
 main()
 print("""    <div class="voet">
