@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-print("Content-Type: text/html\n\n")
 print("""
 <html>
 
 <head>
     <meta charset="utf-8" />
     <title>Untappd Leaderboard</title>
-    <link rel="stylesheet" href="http://arne.ulyssis.be/UntappdLeaderboard/style.css">
+    <link rel="stylesheet" href="http://arne.ulyssis.be/Untappd/style.css">
 </head>
 
 <body class="background">
@@ -130,7 +129,7 @@ print("""    <div class="voet">
         <a href="https://github.com/eurnie/UntappdLeaderboard" target="_blank">https://github.com/eurnie/UntappdLeaderboard</a>
     </div>
 
-    <script src="http://arne.ulyssis.be/UntappdLeaderboard/browser_main.js"></script>
+    <script src="http://arne.ulyssis.be/Untappd/browser_main.js"></script>
 </body>
 
 </html>
