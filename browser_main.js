@@ -1,15 +1,10 @@
 const total_unique_beers_button = document.getElementById('total_unique_beers_button');
 const total_beers_button = document.getElementById('total_beers_button');
 const total_badges_button = document.getElementById('total_badges_button');
-const total_jupilers_button = document.getElementById('total_jupilers_button');
 
 total_unique_beers_button.onclick = async() => { showTab(total_unique_beers_button, 'total_unique_beers_tab') };
 total_beers_button.onclick = async() => { showTab(total_beers_button, 'total_beers_tab') };
 total_badges_button.onclick = async() => { showTab(total_badges_button, 'total_badges_tab') };
-total_jupilers_button.onclick = async() => { showTab(total_jupilers_button, 'total_jupilers_tab'), };
-
-const home_tab = document.getElementById('total_unique_beers_tab');
-home_tab.style.display = 'block';
 
 function showTab(button, tab) {
     let i;
