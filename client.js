@@ -24,7 +24,7 @@ class UntappdClient {
         let promise = new Promise((resolve, reject) => {
             https.get(options, (res) => {
                 // console.log('statusCode:', res.statusCode);
-                console.log('headers:', res.headers);
+                // console.log('headers:', res.headers);
               
                 let result = "";
 

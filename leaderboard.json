@@ -1,0 +1,48 @@
+{
+"number_unique_beers" : {
+            "ranking" : {
+                "position_1" : "Hendrik Van Beersel",
+                "position_2" : "Arne Vermeulen",
+                "position_3" : "Lars Vermeulen",
+                "position_4" : "Dries Wets",
+                "position_5" : "Sebastiaan Wouters"
+            },
+            "points" : {
+                "points_1" : "45",
+                "points_2" : "36",
+                "points_3" : "35",
+                "points_4" : "31",
+                "points_5" : "13"
+            }
+        },"number_total_beers" : {
+            "ranking" : {
+                "position_1" : "Hendrik Van Beersel",
+                "position_2" : "Arne Vermeulen",
+                "position_3" : "Lars Vermeulen",
+                "position_4" : "Dries Wets",
+                "position_5" : "Sebastiaan Wouters"
+            },
+            "points" : {
+                "points_1" : "54",
+                "points_2" : "49",
+                "points_3" : "36",
+                "points_4" : "32",
+                "points_5" : "15"
+            }
+        },"number_badges" : {
+            "ranking" : {
+                "position_1" : "Hendrik Van Beersel",
+                "position_2" : "Arne Vermeulen",
+                "position_3" : "Lars Vermeulen",
+                "position_4" : "Dries Wets",
+                "position_5" : "Sebastiaan Wouters"
+            },
+            "points" : {
+                "points_1" : "71",
+                "points_2" : "60",
+                "points_3" : "60",
+                "points_4" : "41",
+                "points_5" : "24"
+            }
+        }
+}

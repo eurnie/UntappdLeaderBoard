@@ -1,3 +1,5 @@
+import { readFileSync } from 'fs';
+
 const total_unique_beers_button = document.getElementById('total_unique_beers_button');
 const total_beers_button = document.getElementById('total_beers_button');
 const total_badges_button = document.getElementById('total_badges_button');
@@ -8,6 +10,20 @@ total_badges_button.onclick = async() => { showTab(total_badges_button, 'total_b
 
 const home_tab = document.getElementById('total_unique_beers_tab');
 home_tab.style.display = 'block';
+
+let leaderboard = JSON.parse(readFileSync('leaderboard.json'));
+document.getElementById('total_unique_beers_position_1_name').innerHTML = leaderboard.number_unique_beers.ranking.position_1;
+document.getElementById('total_unique_beers_position_2_name').innerHTML = leaderboard.number_unique_beers.ranking.position_2;
+document.getElementById('total_unique_beers_position_3_name').innerHTML = leaderboard.number_unique_beers.ranking.position_3;
+document.getElementById('total_unique_beers_position_4_name').innerHTML = leaderboard.number_unique_beers.ranking.position_4;
+document.getElementById('total_unique_beers_position_5_name').innerHTML = leaderboard.number_unique_beers.ranking.position_5;
+
+document.getElementById('total_unique_beers_position_1_points').innerHTML = leaderboard.number_unique_beers.points.position_1;
+document.getElementById('total_unique_beers_position_2_points').innerHTML = leaderboard.number_unique_beers.points.position_2;
+document.getElementById('total_unique_beers_position_3_points').innerHTML = leaderboard.number_unique_beers.points.position_3;
+document.getElementById('total_unique_beers_position_4_points').innerHTML = leaderboard.number_unique_beers.points.position_4;
+document.getElementById('total_unique_beers_position_5_points').innerHTML = leaderboard.number_unique_beers.points.position_5;
+
 
 function showTab(button, tab) {
     let i;
