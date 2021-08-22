@@ -24,7 +24,7 @@ class UntappdClient {
         let promise = new Promise((resolve, reject) => {
             https.get(options, (res) => {
                 // console.log('statusCode:', res.statusCode);
-                // console.log('headers:', res.headers);
+                console.log('headers:', res.headers);
               
                 let result = "";
 
@@ -57,19 +57,22 @@ class UntappdClient {
 
     sortInformation(listOfInformation) {
         // number of unique beers
-        let numberOfUniqueBeersList = listOfInformation.sort((a, b) => {
+        let numberOfUniqueBeersList = [...listOfInformation].sort((a, b) => {
             return b[2] - a[2];
-          });
+        });
+        numberOfUniqueBeersList.unshift('Number of unique beers');
 
         // number of total beers
-        let numberOfTotalBeersList = listOfInformation.sort((a, b) => {
+        let numberOfTotalBeersList = [...listOfInformation].sort((a, b) => {
             return b[3] - a[3];
-          });
+        });
+        numberOfTotalBeersList.unshift('Number of total beers');
           
         // number of badges
-        let numberOfBadgesList = listOfInformation.sort((a, b) => {
+        let numberOfBadgesList = [...listOfInformation].sort((a, b) => {
             return b[4] - a[4];
-          });
+        });
+        numberOfBadgesList.unshift('Number of badges');
 
         let combination = [numberOfUniqueBeersList, numberOfTotalBeersList, numberOfBadgesList];
         return combination;
