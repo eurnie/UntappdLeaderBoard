@@ -7,11 +7,29 @@ console.log(generateJSON(information));
 // console.log(information);
 
 function generateJSON(information) {
-    let newJSON = '{';
+    let newJSON = '{\n';
     for (let i = 0; i < information.length; i++) {
-        newJSON += `"${information[i][0]}" : { "ranking" : { "position_1"}}`;
+        newJSON += `"${information[i][0]}" : {
+            "ranking" : {
+                "position_1" : "${information[i][1][1]}",
+                "position_2" : "${information[i][2][1]}",
+                "position_3" : "${information[i][3][1]}",
+                "position_4" : "${information[i][4][1]}",
+                "position_5" : "${information[i][5][1]}"
+            },
+            "points" : {
+                "points_1" : "${information[i][1][i+2]}",
+                "points_2" : "${information[i][2][i+2]}",
+                "points_3" : "${information[i][3][i+2]}",
+                "points_4" : "${information[i][4][i+2]}",
+                "points_5" : "${information[i][5][i+2]}"
+            }
+        }`;
+        if (i+1 < information.length) {
+            newJSON += ','
+        }
     }
 
-    newJSON += '}'
+    newJSON += '\n}'
     return newJSON;
 }

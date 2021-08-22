@@ -60,19 +60,19 @@ class UntappdClient {
         let numberOfUniqueBeersList = [...listOfInformation].sort((a, b) => {
             return b[2] - a[2];
         });
-        numberOfUniqueBeersList.unshift('Number of unique beers');
+        numberOfUniqueBeersList.unshift('number_unique_beers');
 
         // number of total beers
         let numberOfTotalBeersList = [...listOfInformation].sort((a, b) => {
             return b[3] - a[3];
         });
-        numberOfTotalBeersList.unshift('Number of total beers');
+        numberOfTotalBeersList.unshift('number_total_beers');
           
         // number of badges
         let numberOfBadgesList = [...listOfInformation].sort((a, b) => {
             return b[4] - a[4];
         });
-        numberOfBadgesList.unshift('Number of badges');
+        numberOfBadgesList.unshift('number_badges');
 
         let combination = [numberOfUniqueBeersList, numberOfTotalBeersList, numberOfBadgesList];
         return combination;
