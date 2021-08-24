@@ -1,13 +1,15 @@
-import * as https from 'https';
-import fs from 'fs';
+const https = require('https');
+const fs = require('fs');
+const path = require("path");
 
-class UntappdClient {
+module.exports = class UntappdClient {
     clientID;
     clientSecret;
     accessToken;
 
     constructor() {
-        let keys = JSON.parse(fs.readFileSync('keys.json'));
+        // let keys = JSON.parse(fs.readFileSync('keys.json'));
+        let keys = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'keys.json')));
         this.clientID = keys.client_id;
         this.clientSecret = keys.client_secret;
         this.accessToken = keys.access_token;
@@ -98,5 +100,3 @@ class UntappdClient {
     }
 
 }
-
-export default UntappdClient;

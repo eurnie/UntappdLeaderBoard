@@ -1,10 +1,14 @@
-import UntappdClient from "./client.js";
+const UntappdClient = require("./client.js");
 
-const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'Filip_vermeul'];
-let client = new UntappdClient();
-let information = await client.retrieveInformation(userList);
-console.log(generateJSON(information));
-// console.log(information);
+main();
+
+async function main() {
+	const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'Filip_vermeul'];
+	let client = new UntappdClient();
+	let information = await client.retrieveInformation(userList);
+	console.log(generateJSON(information));
+	// console.log(information);
+}
 
 function generateJSON(information) {
     let newJSON = '{\n';
