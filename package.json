@@ -1,0 +1,26 @@
+{
+  "name": "leaderboard",
+  "description": "A website with a leaderboard between my friends based on Untappd.com data.",
+  "main": "main.js",
+  "private": false,
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint-fix": "eslint . --ext .js --fix",
+    "lint-start": "eslint --init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eurnie/UntappdLeaderboard"
+  },
+  "keywords": [
+    "Untappd",
+    "leaderboard",
+    "beer"
+  ],
+  "author": "Arne Vermeulen",
+  "license": "MIT",
+  "homepage": "http://arne.ulyssis.be/Untappd/",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}

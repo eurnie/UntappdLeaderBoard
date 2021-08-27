@@ -1,4 +1,4 @@
-const UntappdClient = require("./client.js");
+const UntappdClient = require('./client.js');
 
 main();
 
@@ -7,13 +7,12 @@ async function main() {
 	let client = new UntappdClient();
 	let information = await client.retrieveInformation(userList);
 	console.log(generateJSON(information));
-	// console.log(information);
 }
 
 function generateJSON(information) {
-    let newJSON = '{\n';
-    for (let i = 0; i < information.length; i++) {
-        newJSON += `"${information[i][0]}" : {
+	let newJSON = '{\n';
+	for (let i = 0; i < information.length; i++) {
+		newJSON += `"${information[i][0]}" : {
             "ranking" : {
                 "position_1" : "${information[i][1][1]}",
                 "position_2" : "${information[i][2][1]}",
@@ -29,11 +28,10 @@ function generateJSON(information) {
                 "points_5" : "${information[i][5][i+2]}"
             }
         }`;
-        if (i+1 < information.length) {
-            newJSON += ','
-        }
-    }
-
-    newJSON += '\n}'
-    return newJSON;
+		if (i+1 < information.length) {
+			newJSON += ',';
+		}
+	}
+	newJSON += '\n}';
+	return newJSON;
 }
