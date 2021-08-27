@@ -12,7 +12,10 @@ home_tab.style.display = 'block';
 start();
 
 async function start() {
+
+	
 	let leaderboard = await get('http://arne.ulyssis.be/Untappd/leaderboard.json');
+
 	document.getElementById('total_unique_beers_position_1_name').innerHTML = leaderboard.number_unique_beers.ranking.position_1;
 	document.getElementById('total_unique_beers_position_2_name').innerHTML = leaderboard.number_unique_beers.ranking.position_2;
 	document.getElementById('total_unique_beers_position_3_name').innerHTML = leaderboard.number_unique_beers.ranking.position_3;
@@ -54,12 +57,9 @@ function get(url) {
 
 	let promise = new Promise((resolve, reject) => {
 		var xhttp = new XMLHttpRequest();
-		xhttp.onreadystatechange = function() {
+		xhttp.onreadystatechange = function() {			
 			if (this.readyState == 4 && this.status == 200) {
 				resolve(JSON.parse(this.responseText));
-			}
-			else {
-				reject('Error');
 			}
 		};
 		xhttp.open('GET', url, true);
