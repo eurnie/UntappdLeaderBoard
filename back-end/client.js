@@ -93,6 +93,10 @@ module.exports = class UntappdClient {
                 return "Lars Vermeulen";
             case 'Filip_vermeul':
                 return "Filip Vermeulen";
+            case 'heidi_algoedt_9808':
+                return 'Heidi Algoedt';
+            case 'zico_van_acker_3579':
+                return 'Zico Van Acker';
             default:
                 return nickname;
           } 
