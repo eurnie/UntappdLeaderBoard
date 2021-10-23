@@ -23,6 +23,7 @@ async function start() {
 	document.getElementById('total_unique_beers_position_6_name').innerHTML = leaderboard.number_unique_beers.ranking.position_6;
 	document.getElementById('total_unique_beers_position_7_name').innerHTML = leaderboard.number_unique_beers.ranking.position_7;
 	document.getElementById('total_unique_beers_position_8_name').innerHTML = leaderboard.number_unique_beers.ranking.position_8;
+	document.getElementById('total_unique_beers_position_9_name').innerHTML = leaderboard.number_unique_beers.ranking.position_9;
     
 	document.getElementById('total_unique_beers_position_1_points').innerHTML = leaderboard.number_unique_beers.points.points_1;
 	document.getElementById('total_unique_beers_position_2_points').innerHTML = leaderboard.number_unique_beers.points.points_2;
@@ -32,6 +33,7 @@ async function start() {
 	document.getElementById('total_unique_beers_position_6_points').innerHTML = leaderboard.number_unique_beers.points.points_6;
 	document.getElementById('total_unique_beers_position_7_points').innerHTML = leaderboard.number_unique_beers.points.points_7;
 	document.getElementById('total_unique_beers_position_8_points').innerHTML = leaderboard.number_unique_beers.points.points_8;
+	document.getElementById('total_unique_beers_position_9_points').innerHTML = leaderboard.number_unique_beers.points.points_9;
     
 	document.getElementById('total_beers_position_1_name').innerHTML = leaderboard.number_total_beers.ranking.position_1;
 	document.getElementById('total_beers_position_2_name').innerHTML = leaderboard.number_total_beers.ranking.position_2;
@@ -41,6 +43,7 @@ async function start() {
 	document.getElementById('total_beers_position_6_name').innerHTML = leaderboard.number_total_beers.ranking.position_6;
 	document.getElementById('total_beers_position_7_name').innerHTML = leaderboard.number_total_beers.ranking.position_7;
 	document.getElementById('total_beers_position_8_name').innerHTML = leaderboard.number_total_beers.ranking.position_8;
+	document.getElementById('total_beers_position_9_name').innerHTML = leaderboard.number_total_beers.ranking.position_9;
     
 	document.getElementById('total_beers_position_1_points').innerHTML = leaderboard.number_total_beers.points.points_1;
 	document.getElementById('total_beers_position_2_points').innerHTML = leaderboard.number_total_beers.points.points_2;
@@ -50,6 +53,7 @@ async function start() {
 	document.getElementById('total_beers_position_6_points').innerHTML = leaderboard.number_total_beers.points.points_6;
 	document.getElementById('total_beers_position_7_points').innerHTML = leaderboard.number_total_beers.points.points_7;
 	document.getElementById('total_beers_position_8_points').innerHTML = leaderboard.number_total_beers.points.points_8;
+	document.getElementById('total_beers_position_9_points').innerHTML = leaderboard.number_total_beers.points.points_9;
     
 	document.getElementById('total_badges_position_1_name').innerHTML = leaderboard.number_badges.ranking.position_1;
 	document.getElementById('total_badges_position_2_name').innerHTML = leaderboard.number_badges.ranking.position_2;
@@ -59,6 +63,7 @@ async function start() {
 	document.getElementById('total_badges_position_6_name').innerHTML = leaderboard.number_badges.ranking.position_6;
 	document.getElementById('total_badges_position_7_name').innerHTML = leaderboard.number_badges.ranking.position_7;
 	document.getElementById('total_badges_position_8_name').innerHTML = leaderboard.number_badges.ranking.position_8;
+	document.getElementById('total_badges_position_9_name').innerHTML = leaderboard.number_badges.ranking.position_9;
     
 	document.getElementById('total_badges_position_1_points').innerHTML = leaderboard.number_badges.points.points_1;
 	document.getElementById('total_badges_position_2_points').innerHTML = leaderboard.number_badges.points.points_2;
@@ -68,6 +73,7 @@ async function start() {
 	document.getElementById('total_badges_position_6_points').innerHTML = leaderboard.number_badges.points.points_6;
 	document.getElementById('total_badges_position_7_points').innerHTML = leaderboard.number_badges.points.points_7;
 	document.getElementById('total_badges_position_8_points').innerHTML = leaderboard.number_badges.points.points_8;
+	document.getElementById('total_badges_position_9_points').innerHTML = leaderboard.number_badges.points.points_9;
 }
 
 function get(url) {
