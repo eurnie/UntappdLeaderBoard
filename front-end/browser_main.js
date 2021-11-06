@@ -6,13 +6,10 @@ total_unique_beers_button.onclick = async() => { showTab(total_unique_beers_butt
 total_beers_button.onclick = async() => { showTab(total_beers_button, 'total_beers_tab'); };
 total_badges_button.onclick = async() => { showTab(total_badges_button, 'total_badges_tab'); };
 
-const home_tab = document.getElementById('total_unique_beers_tab');
-home_tab.style.display = 'block';
-
+showTab(total_unique_beers_button, 'total_unique_beers_tab');
 start();
 
 async function start() {
-	
 	let leaderboard = await get('http://arne.ulyssis.be/Untappd/leaderboard.json');
 
 	document.getElementById('total_unique_beers_position_1_name').innerHTML = leaderboard.number_unique_beers.ranking.position_1;
@@ -77,7 +74,6 @@ async function start() {
 }
 
 function get(url) {
-
 	let promise = new Promise((resolve, reject) => {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {			
@@ -111,6 +107,5 @@ function showTab(button, tab) {
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	const currentTab = document.getElementById(tab);
 	currentTab.style.display = 'block';
-
 	button.className += ' active';
 }
