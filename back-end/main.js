@@ -3,7 +3,7 @@ const UntappdClient = require('./client.js');
 main();
 
 async function main() {
-	const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'zico_van_acker_3579', 'Tommiexp', 'lennaert_wouters_6771', 'Mattheus_'];
+	const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'zico_van_acker_3579', 'Tommiexp', 'lennaert_wouters_6771', 'Mattheus_', 'heidi_algoedt_9808', 'Filip_vermeul', 'JorenDeleu'];
 	let client = new UntappdClient();
 	let information = await client.retrieveInformation(userList);
 	console.log(generateJSON(information));
@@ -22,7 +22,10 @@ function generateJSON(information) {
                 "position_6" : "${information[i][6][1]}",
                 "position_7" : "${information[i][7][1]}",
                 "position_8" : "${information[i][8][1]}",
-                "position_9" : "${information[i][9][1]}"
+                "position_9" : "${information[i][9][1]}",
+                "position_10" : "${information[i][10][1]}",
+                "position_11" : "${information[i][11][1]}",
+                "position_12" : "${information[i][12][1]}"
             },
             "points" : {
                 "points_1" : "${information[i][1][i+2]}",
@@ -33,7 +36,10 @@ function generateJSON(information) {
                 "points_6" : "${information[i][6][i+2]}",
                 "points_7" : "${information[i][7][i+2]}",
                 "points_8" : "${information[i][8][i+2]}",
-                "points_9" : "${information[i][9][i+2]}"
+                "points_9" : "${information[i][9][i+2]}",
+                "points_10" : "${information[i][10][i+2]}",
+                "points_11" : "${information[i][11][i+2]}",
+                "points_12" : "${information[i][12][i+2]}"
                 
             }
         }`;
