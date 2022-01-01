@@ -1,48 +1,108 @@
 {
 "number_unique_beers" : {
             "ranking" : {
-                "position_1" : "Hendrik Van Beersel",
+                "position_1" : "Dries Wets",
                 "position_2" : "Arne Vermeulen",
-                "position_3" : "Lars Vermeulen",
-                "position_4" : "Dries Wets",
-                "position_5" : "Sebastiaan Wouters"
+                "position_3" : "Hendrik Van Beersel",
+                "position_4" : "Ellen Van Eyken",
+                "position_5" : "Sebastiaan Wouters",
+                "position_6" : "Lars Vermeulen",
+                "position_7" : "Bert Haverals",
+                "position_8" : "Zico Van Acker",
+                "position_9" : "Tom Andries",
+                "position_10" : "Joren Deleu",
+                "position_11" : "Lennaert Wouters",
+                "position_12" : "Heidi Algoedt",
+                "position_13" : "Filip Vermeulen",
+                "position_14" : "Matthías Leurs"
+
             },
             "points" : {
-                "points_1" : "48",
-                "points_2" : "36",
-                "points_3" : "35",
-                "points_4" : "34",
-                "points_5" : "13"
+                "points_1" : "209",
+                "points_2" : "199",
+                "points_3" : "184",
+                "points_4" : "79",
+                "points_5" : "71",
+                "points_6" : "59",
+                "points_7" : "32",
+                "points_8" : "27",
+                "points_9" : "25",
+                "points_10" : "15",
+                "points_11" : "13",
+                "points_12" : "5",
+                "points_13" : "5",
+                "points_14" : "1"
+                
             }
         },"number_total_beers" : {
             "ranking" : {
-                "position_1" : "Hendrik Van Beersel",
-                "position_2" : "Arne Vermeulen",
-                "position_3" : "Lars Vermeulen",
-                "position_4" : "Dries Wets",
-                "position_5" : "Sebastiaan Wouters"
+                "position_1" : "Arne Vermeulen",
+                "position_2" : "Dries Wets",
+                "position_3" : "Hendrik Van Beersel",
+                "position_4" : "Ellen Van Eyken",
+                "position_5" : "Sebastiaan Wouters",
+                "position_6" : "Lars Vermeulen",
+                "position_7" : "Bert Haverals",
+                "position_8" : "Zico Van Acker",
+                "position_9" : "Tom Andries",
+                "position_10" : "Joren Deleu",
+                "position_11" : "Lennaert Wouters",
+                "position_12" : "Heidi Algoedt",
+                "position_13" : "Filip Vermeulen",
+                "position_14" : "Matthías Leurs"
+
             },
             "points" : {
-                "points_1" : "58",
-                "points_2" : "49",
-                "points_3" : "36",
-                "points_4" : "35",
-                "points_5" : "15"
+                "points_1" : "241",
+                "points_2" : "215",
+                "points_3" : "214",
+                "points_4" : "88",
+                "points_5" : "83",
+                "points_6" : "83",
+                "points_7" : "33",
+                "points_8" : "27",
+                "points_9" : "26",
+                "points_10" : "16",
+                "points_11" : "13",
+                "points_12" : "6",
+                "points_13" : "5",
+                "points_14" : "1"
+                
             }
         },"number_badges" : {
             "ranking" : {
-                "position_1" : "Hendrik Van Beersel",
-                "position_2" : "Arne Vermeulen",
-                "position_3" : "Lars Vermeulen",
-                "position_4" : "Dries Wets",
-                "position_5" : "Sebastiaan Wouters"
+                "position_1" : "Arne Vermeulen",
+                "position_2" : "Hendrik Van Beersel",
+                "position_3" : "Dries Wets",
+                "position_4" : "Sebastiaan Wouters",
+                "position_5" : "Lars Vermeulen",
+                "position_6" : "Ellen Van Eyken",
+                "position_7" : "Bert Haverals",
+                "position_8" : "Zico Van Acker",
+                "position_9" : "Tom Andries",
+                "position_10" : "Joren Deleu",
+                "position_11" : "Lennaert Wouters",
+                "position_12" : "Filip Vermeulen",
+                "position_13" : "Heidi Algoedt",
+                "position_14" : "Matthías Leurs"
+
             },
             "points" : {
-                "points_1" : "72",
-                "points_2" : "60",
-                "points_3" : "60",
-                "points_4" : "49",
-                "points_5" : "24"
+                "points_1" : "329",
+                "points_2" : "316",
+                "points_3" : "308",
+                "points_4" : "124",
+                "points_5" : "121",
+                "points_6" : "120",
+                "points_7" : "42",
+                "points_8" : "37",
+                "points_9" : "35",
+                "points_10" : "29",
+                "points_11" : "22",
+                "points_12" : "8",
+                "points_13" : "7",
+                "points_14" : "2"
+                
             }
         }
 }
