@@ -3,7 +3,7 @@ const UntappdClient = require('./client.js');
 main();
 
 async function main() {
-	const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'zico_van_acker_3579', 'Tommiexp', 'lennaert_wouters_6771', 'Mattheus_', 'heidi_algoedt_9808', 'Filip_vermeul', 'JorenDeleu'];
+	const userList = ['eurniee', 'DriesWets', 'BassieWouters', 'Den_Henry', 'LarsVer', 'zico_van_acker_3579', 'Tommiexp', 'lennaert_wouters_6771', 'Mattheus_', 'heidi_algoedt_9808', 'Filip_vermeul', 'JorenDeleu', 'ellenvaneyken', 'bert_haverals_3063', 'Aphroditi', 'Arne11'];
 	let client = new UntappdClient();
 	let information = await client.retrieveInformation(userList);
 	console.log(generateJSON(information));
@@ -25,7 +25,11 @@ function generateJSON(information) {
                 "position_9" : "${information[i][9][1]}",
                 "position_10" : "${information[i][10][1]}",
                 "position_11" : "${information[i][11][1]}",
-                "position_12" : "${information[i][12][1]}"
+                "position_12" : "${information[i][12][1]}",
+                "position_13" : "${information[i][13][1]}",
+                "position_14" : "${information[i][14][1]}",
+                "position_15" : "${information[i][15][1]}",
+                "position_16" : "${information[i][16][1]}"
             },
             "points" : {
                 "points_1" : "${information[i][1][i+2]}",
@@ -39,8 +43,11 @@ function generateJSON(information) {
                 "points_9" : "${information[i][9][i+2]}",
                 "points_10" : "${information[i][10][i+2]}",
                 "points_11" : "${information[i][11][i+2]}",
-                "points_12" : "${information[i][12][i+2]}"
-                
+                "points_12" : "${information[i][12][i+2]}",
+                "points_13" : "${information[i][13][i+2]}",
+                "points_14" : "${information[i][14][i+2]}",
+                "points_15" : "${information[i][15][i+2]}",
+                "points_16" : "${information[i][16][i+2]}"
             }
         }`;
 		if (i+1 < information.length) {

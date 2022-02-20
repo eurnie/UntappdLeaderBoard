@@ -50,9 +50,10 @@ module.exports = class UntappdClient {
         for (let i = 0; i < listOfUsers.length; i++) {
             let user = listOfUsers[i];
             let data = await this.get(`/v4/user/info/${listOfUsers[i]}?access_token=${this.accessToken}`);
-            result.push([user, this.findRealName(user), data.response.user.stats.total_beers, data.response.user.stats.total_checkins, data.response.user.stats.total_badges]);
+            let realName = data.response.user.first_name.concat(" ", data.response.user.last_name);
+            result.push([user, realName, data.response.user.stats.total_beers, data.response.user.stats.total_checkins, data.response.user.stats.total_badges]);
         }
-
+        
         return this.sortInformation(result);
     }
 
@@ -77,41 +78,6 @@ module.exports = class UntappdClient {
 
         let combination = [numberOfUniqueBeersList, numberOfTotalBeersList, numberOfBadgesList];
         return combination;
-    }
-
-    findRealName(nickname) {
-        switch(nickname) {
-            case 'eurniee':
-              return 'Arne Vermeulen';
-            case 'DriesWets':
-                return "Dries Wets";
-            case 'BassieWouters':
-                return "Sebastiaan Wouters";
-            case 'Den_Henry':
-                return "Hendrik Van Beersel";
-            case 'LarsVer':
-                return "Lars Vermeulen";
-            case 'Filip_vermeul':
-                return "Filip Vermeulen";
-            case 'heidi_algoedt_9808':
-                return 'Heidi Algoedt';
-            case 'zico_van_acker_3579':
-                return 'Zico Van Acker';
-            case 'Tommiexp':
-                return 'Tom Andries';
-            case 'lennaert_wouters_6771':
-                return 'Lennaert Wouters'
-            case 'Mattheus_':
-                return 'Matthías Leurs'
-            case 'heidi_algoedt_9808':
-                return 'Heidi Algoedt'
-            case 'Filip_vermeul':
-                return 'Filip Vermeulen'
-            case 'JorenDeleu':
-                return 'Joren Deleu'
-            default:
-                return nickname;
-          } 
     }
 
 }

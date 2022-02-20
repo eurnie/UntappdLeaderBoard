@@ -64,6 +64,8 @@ async function start() {
 	document.getElementById('total_unique_beers_position_12_name').innerHTML = leaderboard.number_unique_beers.ranking.position_12;
 	document.getElementById('total_unique_beers_position_13_name').innerHTML = leaderboard.number_unique_beers.ranking.position_13;
 	document.getElementById('total_unique_beers_position_14_name').innerHTML = leaderboard.number_unique_beers.ranking.position_14;
+	document.getElementById('total_unique_beers_position_15_name').innerHTML = leaderboard.number_unique_beers.ranking.position_15;
+	document.getElementById('total_unique_beers_position_16_name').innerHTML = leaderboard.number_unique_beers.ranking.position_16;
     
 	document.getElementById('total_unique_beers_position_1_points').innerHTML = leaderboard.number_unique_beers.points.points_1;
 	document.getElementById('total_unique_beers_position_2_points').innerHTML = leaderboard.number_unique_beers.points.points_2;
@@ -79,6 +81,8 @@ async function start() {
 	document.getElementById('total_unique_beers_position_12_points').innerHTML = leaderboard.number_unique_beers.points.points_12;
 	document.getElementById('total_unique_beers_position_13_points').innerHTML = leaderboard.number_unique_beers.points.points_13;
 	document.getElementById('total_unique_beers_position_14_points').innerHTML = leaderboard.number_unique_beers.points.points_14;
+	document.getElementById('total_unique_beers_position_15_points').innerHTML = leaderboard.number_unique_beers.points.points_15;
+	document.getElementById('total_unique_beers_position_16_points').innerHTML = leaderboard.number_unique_beers.points.points_16;
     
 	document.getElementById('total_beers_position_1_name').innerHTML = leaderboard.number_total_beers.ranking.position_1;
 	document.getElementById('total_beers_position_2_name').innerHTML = leaderboard.number_total_beers.ranking.position_2;
@@ -94,6 +98,8 @@ async function start() {
 	document.getElementById('total_beers_position_12_name').innerHTML = leaderboard.number_total_beers.ranking.position_12;
 	document.getElementById('total_beers_position_13_name').innerHTML = leaderboard.number_total_beers.ranking.position_13;
 	document.getElementById('total_beers_position_14_name').innerHTML = leaderboard.number_total_beers.ranking.position_14;
+	document.getElementById('total_beers_position_15_name').innerHTML = leaderboard.number_total_beers.ranking.position_15;
+	document.getElementById('total_beers_position_16_name').innerHTML = leaderboard.number_total_beers.ranking.position_16;
     
 	document.getElementById('total_beers_position_1_points').innerHTML = leaderboard.number_total_beers.points.points_1;
 	document.getElementById('total_beers_position_2_points').innerHTML = leaderboard.number_total_beers.points.points_2;
@@ -109,6 +115,8 @@ async function start() {
 	document.getElementById('total_beers_position_12_points').innerHTML = leaderboard.number_total_beers.points.points_12;
 	document.getElementById('total_beers_position_13_points').innerHTML = leaderboard.number_total_beers.points.points_13;
 	document.getElementById('total_beers_position_14_points').innerHTML = leaderboard.number_total_beers.points.points_14;
+	document.getElementById('total_beers_position_15_points').innerHTML = leaderboard.number_total_beers.points.points_15;
+	document.getElementById('total_beers_position_16_points').innerHTML = leaderboard.number_total_beers.points.points_16;
     
 	document.getElementById('total_badges_position_1_name').innerHTML = leaderboard.number_badges.ranking.position_1;
 	document.getElementById('total_badges_position_2_name').innerHTML = leaderboard.number_badges.ranking.position_2;
@@ -124,6 +132,8 @@ async function start() {
 	document.getElementById('total_badges_position_12_name').innerHTML = leaderboard.number_badges.ranking.position_12;
 	document.getElementById('total_badges_position_13_name').innerHTML = leaderboard.number_badges.ranking.position_13;
 	document.getElementById('total_badges_position_14_name').innerHTML = leaderboard.number_badges.ranking.position_14;
+	document.getElementById('total_badges_position_15_name').innerHTML = leaderboard.number_badges.ranking.position_15;
+	document.getElementById('total_badges_position_16_name').innerHTML = leaderboard.number_badges.ranking.position_16;
     
 	document.getElementById('total_badges_position_1_points').innerHTML = leaderboard.number_badges.points.points_1;
 	document.getElementById('total_badges_position_2_points').innerHTML = leaderboard.number_badges.points.points_2;
@@ -139,6 +149,8 @@ async function start() {
 	document.getElementById('total_badges_position_12_points').innerHTML = leaderboard.number_badges.points.points_12;
 	document.getElementById('total_badges_position_13_points').innerHTML = leaderboard.number_badges.points.points_13;
 	document.getElementById('total_badges_position_14_points').innerHTML = leaderboard.number_badges.points.points_14;
+	document.getElementById('total_badges_position_15_points').innerHTML = leaderboard.number_badges.points.points_15;
+	document.getElementById('total_badges_position_16_points').innerHTML = leaderboard.number_badges.points.points_16;
 }
 
 function get(url) {
